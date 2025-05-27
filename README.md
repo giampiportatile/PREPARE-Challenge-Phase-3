@@ -24,13 +24,23 @@ Finally, we create visualizations to bring the data to life for lay users, provi
 
 ## Setup
 
-Create the Python 3.12.4 environment using make:
-cd path/to/this/directory
-make create_environment
-Follow the on-screen instructions to activate the environment, e.g.:
-source activate nr_prepare
-Install the required Python packages using the below command. These are listed in requirements.txt. The code works with latest package versions as at 30 March 25, but the latest version of XGBoost will give slightly different predictions, and the slightly out-of-date scikit-learn 1.5.2 is needed for compatibility with XGBoost 2.1.2.
-make requirements
+Installation
+To install the necessary dependencies for TALENT, you can use the following commands:
+
+Using pip:
+
+Install the required libraries from the requirements.txt file:
+
+pip install -r requirements.txt
+Using conda:
+
+If you are using conda, you can create a new environment and install the dependencies:
+
+conda create -n talent python=3.10
+conda activate talent
+pip install -r requirements.txt
+
+
 Copy the competition data into data/raw:
 
 train_features.csv
@@ -48,7 +58,9 @@ And select nr_prepare as your Python kernel in Jupyter.
 Expected file structure before inference or training is run
 submission
 ├── data
+
 │   ├── processed       <- The final predictions
+
 │   └── raw             <- The original, immutable data dump
 │       ├── submission_format.csv
 │       ├── test_features.csv
