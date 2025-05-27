@@ -1,2 +1,104 @@
 # PREPARE-Challenge-Phase-3
 Proof of Principle Demonstration for Phase 3 of PREPARE CHALLENGE
+
+
+
+Submission for "PREPARE: Pioneering Research for Early Prediction of Alzheimer's and Related Dementias EUREKA Challenge" https://www.drivendata.org/competitions/group/nih-nia-alzheimers-adrd-competition/. The competition was sponsored by the National Institute on Aging (NIA), an institute of the National Institute of Health (NIH).
+
+Author: Nick Nettleton (LinkedIn, GitHub)
+
+Username: NickNettleton
+
+Team: Nick & Ry
+
+Licence: MIT
+
+Summary
+The objective of the competition was to predict individuals' future cognitive capacity based on social determinants, as a risk indicator for Alzheimer's, with an emphasis on explainability of predictions. Our solution was placed #2 in the Model Area.
+
+The main prediction model is an ensemble of LightGBM, XGBoost and CatBoost regressors, implemented with a VotingRegressor. The hyperparameters were optimized using Optuna.
+
+We fit a MapieRegressor to estimate prediction intervals, and use SHAP to generate individual and population level explanations of the predictions.
+
+Finally, we create visualizations to bring the data to life for lay users, providing meaningful context and intuition about individual predictions and their underlying factors.
+
+Setup
+The project structure is based on https://github.com/drivendataorg/prize-winner-template/ and https://cookiecutter-data-science.drivendata.org/.
+
+Create the Python 3.12.4 environment using make:
+cd path/to/this/directory
+make create_environment
+Follow the on-screen instructions to activate the environment, e.g.:
+source activate nr_prepare
+Install the required Python packages using the below command. These are listed in requirements.txt. The code works with latest package versions as at 30 March 25, but the latest version of XGBoost will give slightly different predictions, and the slightly out-of-date scikit-learn 1.5.2 is needed for compatibility with XGBoost 2.1.2.
+make requirements
+Copy the competition data into data/raw:
+
+train_features.csv
+train_labels.csv
+test_features.csv
+submission_format.csv
+To skip training, copy the model weights to models/model.pkl
+
+To use the the Jupyter notebook examples.ipynb with this environment:
+
+pip install --user ipykernel
+python -m ipykernel install --user --name=nr_prepare
+And select nr_prepare as your Python kernel in Jupyter.
+
+Expected file structure before inference or training is run
+submission
+├── data
+│   ├── processed       <- The final predictions
+│   └── raw             <- The original, immutable data dump
+│       ├── submission_format.csv
+│       ├── test_features.csv
+│       ├── train_features.csv
+│       └── train_labels.csv
+├── models
+│   └── model.pkl       <- Required for inference
+├── notebooks
+│   └── examples.ipynb  <- Example Python implementation
+├── src                 <- Source code for use in this project
+│   ├── __init__.py
+│   ├── defaults.py
+│   ├── predict.py
+│   ├── prepare_data.py
+│   ├── train.py
+│   └── visualise.py
+├── Makefile            <- Makefile with commands like `make requirements`
+├── README.md           <- This README file
+├── requirements.txt    <- The requirements file for reproducing the analysis environment
+└── setup.py            <- makes project pip installable (pip install -e .) so src can be imported
+Hardware
+Running the solution on a MacBook Air M1 8GB memory and macOS Sequoia 15.0:
+
+Training time: ~3m 10s
+Inference time: ~3s
+Training and inference were both run on CPU.
+
+Run training
+The model can be trained from the command line or in Python.
+
+Command line training
+To run training from the command line: python src/train.py.
+
+$ python src/train.py --help
+Usage: train.py [OPTIONS]
+
+Options 
+  --features-path           PATH    Path to the raw training dataset for processing
+                                    [default: data/raw/train_features.csv]
+  --labels-path             PATH    Path to the training labels
+                                    [default: data/raw/train_labels.csv]
+  --model-save-path         PATH    Path to save the trained model weights
+                                    [default: models/model.pkl]
+  --cv                              Cross validate on training dataset and report RMSE before training
+                                    [default: no-cv]                                       
+  --cv-predict                      Generate predictions from cross validation and save before training
+                                    [default: no-cv-predict]
+  --cv-predictions-path     PATH    Path to save predictions from cross validation
+                                    [default: data/processed/cv_predictions.csv]
+  --debug                           Run on a small subset of the data for debugging
+                                    [default: no-debug]
+ --help                             Show this message and exit.
