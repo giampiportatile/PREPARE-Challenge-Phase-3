@@ -29,7 +29,7 @@ Using conda:
 
 Create a new environment from the .yaml file shared in this directory:
 
-conda env create --name prepare_phase2 --file=environments.yml
+conda env create -n prepare_phase2 -f environments.yaml
 
 ## Data
 Copy the competition data into data/raw:
