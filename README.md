@@ -5,7 +5,9 @@ Proof of Principle Demonstration for Phase 3 of PREPARE CHALLENGE
 Submission for Phase 3 of the PREPARE CHALLENGE: "Pioneering Research for Early Prediction of Alzheimer's and Related Dementias EUREKA Challenge" .
 Link to the competition: https://www.drivendata.org/competitions/group/nih-nia-alzheimers-adrd-competition/
 Link to the phase 3 of the competition: https://www.drivendata.org/competitions/304/prepare-challenge-phase-3/
+
 Author: Gianpaolo Tomasi
+
 Team: 
 
 Licence: MIT
