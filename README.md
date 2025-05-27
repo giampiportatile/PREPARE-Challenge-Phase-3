@@ -1,10 +1,11 @@
 # PREPARE-Challenge-Phase-3
-Proof of Principle Demonstration for Phase 3 of PREPARE CHALLENGE
+Proof of Principle Demonstration for Phase 3 of PREPARE CHALLENGE  "Pioneering Research for Early Prediction of Alzheimer's and Related Dementias EUREKA Challenge" .
 
-
-Submission for Phase 3 of the PREPARE CHALLENGE: "Pioneering Research for Early Prediction of Alzheimer's and Related Dementias EUREKA Challenge" .
 Link to the competition: https://www.drivendata.org/competitions/group/nih-nia-alzheimers-adrd-competition/
+
 Link to the phase 3 of the competition: https://www.drivendata.org/competitions/304/prepare-challenge-phase-3/
+
+The project structure is based on https://cookiecutter-data-science.drivendata.org/.
 
 Author: Gianpaolo Tomasi
 
@@ -13,16 +14,15 @@ Team:
 Licence: MIT
 
 ## Summary
-The objective of the competition was to predict individuals' future cognitive capacity based on social determinants, as a risk indicator for Alzheimer's, with an emphasis on explainability of predictions. Our solution was placed #2 in the Model Area.
+The objective of the third phase of the competition was to improve the solution proposed for  phase 2 of the project, assess its ge, future cognitive capacity based on social determinants, as a risk indicator for Alzheimer's, with an emphasis on explainability of predictions. 
 
-The main prediction model is an ensemble of LightGBM, XGBoost and CatBoost regressors, implemented with a VotingRegressor. The hyperparameters were optimized using Optuna.
+The main prediction model is an ensemble of LightGBM, XGBoost and CatBoost regressors, implemented with a VotingRegressor. 
 
 We fit a MapieRegressor to estimate prediction intervals, and use SHAP to generate individual and population level explanations of the predictions.
 
 Finally, we create visualizations to bring the data to life for lay users, providing meaningful context and intuition about individual predictions and their underlying factors.
 
-Setup
-The project structure is based on https://github.com/drivendataorg/prize-winner-template/ and https://cookiecutter-data-science.drivendata.org/.
+## Setup
 
 Create the Python 3.12.4 environment using make:
 cd path/to/this/directory
