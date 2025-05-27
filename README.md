@@ -2,14 +2,11 @@
 Proof of Principle Demonstration for Phase 3 of PREPARE CHALLENGE
 
 
+Submission for Phase 3 of the PREPARE CHALLENGE: "Pioneering Research for Early Prediction of Alzheimer's and Related Dementias EUREKA Challenge" https://www.drivendata.org/competitions/group/nih-nia-alzheimers-adrd-competition/. The competition was sponsored by the National Institute on Aging (NIA), an institute of the National Institute of Health (NIH).
 
-Submission for "PREPARE: Pioneering Research for Early Prediction of Alzheimer's and Related Dementias EUREKA Challenge" https://www.drivendata.org/competitions/group/nih-nia-alzheimers-adrd-competition/. The competition was sponsored by the National Institute on Aging (NIA), an institute of the National Institute of Health (NIH).
+Author: Gianpaolo Tomasi
 
-Author: Nick Nettleton (LinkedIn, GitHub)
-
-Username: NickNettleton
-
-Team: Nick & Ry
+Team: 
 
 Licence: MIT
 
