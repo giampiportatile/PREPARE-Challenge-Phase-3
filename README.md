@@ -27,20 +27,18 @@ Install the required libraries from the requirements.txt file:
 pip install -r requirements.txt
 Using conda:
 
-Create a new environment and install the dependencies:
+Create a new environment from the .yaml file shared in this directory:
 
-conda create -n talent python=3.10
-conda activate talent
-pip install -r requirements.txt
+conda env create --name prepare_phase2 --file=environments.yml
 
-
-
+## Data
 Copy the competition data into data/raw:
 
 train_features.csv
 train_labels.csv
 test_features.csv
 submission_format.csv
+
 To skip training, copy the model weights to models/model.pkl
 
 To use the the Jupyter notebook examples.ipynb with this environment:
@@ -49,32 +47,7 @@ pip install --user ipykernel
 python -m ipykernel install --user --name=nr_prepare
 And select nr_prepare as your Python kernel in Jupyter.
 
-Expected file structure before inference or training is run
-submission
-├── data
 
-│   ├── processed       <- The final predictions
-
-│   └── raw             <- The original, immutable data dump
-│       ├── submission_format.csv
-│       ├── test_features.csv
-│       ├── train_features.csv
-│       └── train_labels.csv
-├── models
-│   └── model.pkl       <- Required for inference
-├── notebooks
-│   └── examples.ipynb  <- Example Python implementation
-├── src                 <- Source code for use in this project
-│   ├── __init__.py
-│   ├── defaults.py
-│   ├── predict.py
-│   ├── prepare_data.py
-│   ├── train.py
-│   └── visualise.py
-├── Makefile            <- Makefile with commands like `make requirements`
-├── README.md           <- This README file
-├── requirements.txt    <- The requirements file for reproducing the analysis environment
-└── setup.py            <- makes project pip installable (pip install -e .) so src can be imported
 Hardware
 Running the solution on a MacBook Air M1 8GB memory and macOS Sequoia 15.0:
 
