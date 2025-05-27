@@ -15,7 +15,7 @@ Licence: MIT
 
 ## Summary
 The challenge is centered around developing better methods for prediction of Alzheimer's disease and Alzheimer's disease related dementias (AD/ADRD) focuing in particular on early diagnosis. 
-Phase 3 is focused on the imporvement of the winning models of Phase 2 for both social determinant and acoustic tracrks.
+Phase 3 is focused on the imporvement of the winning models of Phase 2 for both social determinant and acoustic tracks.
 
 
 ## Setup
