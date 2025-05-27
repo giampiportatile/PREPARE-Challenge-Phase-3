@@ -12,7 +12,7 @@ Team:
 
 Licence: MIT
 
-# H1 Summary
+## Summary
 The objective of the competition was to predict individuals' future cognitive capacity based on social determinants, as a risk indicator for Alzheimer's, with an emphasis on explainability of predictions. Our solution was placed #2 in the Model Area.
 
 The main prediction model is an ensemble of LightGBM, XGBoost and CatBoost regressors, implemented with a VotingRegressor. The hyperparameters were optimized using Optuna.
