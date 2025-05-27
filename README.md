@@ -14,18 +14,11 @@ Team:
 Licence: MIT
 
 ## Summary
-The objective of the third phase of the competition was to improve the solution proposed for  phase 2 of the project, assess its ge, future cognitive capacity based on social determinants, as a risk indicator for Alzheimer's, with an emphasis on explainability of predictions. 
+The challenge is centered around developing better methods for prediction of Alzheimer's disease and Alzheimer's disease related dementias (AD/ADRD) as early as possible. 
+Phase 3 is focused on improving winning Phase 2 models to provide useful proofs-of-concept about early prediction methods.
 
-The main prediction model is an ensemble of LightGBM, XGBoost and CatBoost regressors, implemented with a VotingRegressor. 
-
-We fit a MapieRegressor to estimate prediction intervals, and use SHAP to generate individual and population level explanations of the predictions.
-
-Finally, we create visualizations to bring the data to life for lay users, providing meaningful context and intuition about individual predictions and their underlying factors.
 
 ## Setup
-
-Installation
-To install the necessary dependencies for TALENT, you can use the following commands:
 
 Using pip:
 
@@ -34,11 +27,12 @@ Install the required libraries from the requirements.txt file:
 pip install -r requirements.txt
 Using conda:
 
-If you are using conda, you can create a new environment and install the dependencies:
+Create a new environment and install the dependencies:
 
 conda create -n talent python=3.10
 conda activate talent
 pip install -r requirements.txt
+
 
 
 Copy the competition data into data/raw:
