@@ -9,7 +9,7 @@ The project structure is based on https://cookiecutter-data-science.drivendata.o
 
 Author: Gianpaolo Tomasi
 
-Team: 
+Team: GiaPaoDawei
 
 Licence: MIT
 
