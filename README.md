@@ -25,19 +25,24 @@ Using pip:
 Install the required libraries from the requirements.txt file:
 
 pip install -r requirements.txt
+
 Using conda:
 
-Create a new environment from the .yaml file shared in this directory:
+Create a new environment directly from the .yaml file shared in this directory:
 
-conda env create -n prepare_phase2 -f environments.yaml
+conda env create -n PREPARE_phase3  -f environments.yaml
+
 
 ## Data
-Copy the competition data into data/raw:
+Copy the 5 files of the competition (social determinats track) into the data/raw folder.
+Note the raw data is not available anymore on the DrivenData website, so we will assume the user downloaded them during the competition.
+
 
 train_features.csv
 train_labels.csv
 test_features.csv
 submission_format.csv
+
 
 To skip training, copy the model weights to models/model.pkl
 
@@ -49,7 +54,6 @@ And select nr_prepare as your Python kernel in Jupyter.
 
 
 Hardware
-Running the solution on a MacBook Air M1 8GB memory and macOS Sequoia 15.0:
 
 Training time: ~3m 10s
 Inference time: ~3s
