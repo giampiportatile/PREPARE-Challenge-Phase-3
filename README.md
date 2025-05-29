@@ -21,10 +21,13 @@ Phase 3 is focused on the imporvement of the winning models of Phase 2 for both 
 ## Setup
 
 Using pip:
+1) create virtual environment
+conda create -n PREPARE_phase3 python=3.9
 
-Install the required libraries from the requirements.txt file:
+2) Install the required libraries from the requirements.txt file:
 
 pip install -r requirements.txt
+
 
 Using conda:
 
