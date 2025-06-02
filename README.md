@@ -23,7 +23,7 @@ Phase 3 is focused on the imporvement of the winning models of Phase 2 for both 
 
 Using pip:
 1) create virtual environment
-conda create -n PREPARE_phase3 python=3.9
+conda create -n PREPARE_phase3 python=3.10
 
 2) Install the required libraries from the requirements.txt file:
 
@@ -32,13 +32,13 @@ pip install -r requirements.txt
 
 Using conda:
 
-Create a new environment directly from the .yaml file shared in this directory:
+Create a new environment directly from the .yml file shared in this directory:
 
-conda env create -n PREPARE_phase3  -f environments.yaml
+conda env create -n PREPARE_phase3  -f environment.yml
 
 
 ## Data
-Copy the 5 files of the competition (social determinats track) into the data/raw folder.
+Copy the 5 files of the competition (social determinants track) into the data/raw folder.
 Note the raw data is not available anymore on the DrivenData website, so we will assume the user downloaded them during the competition.
 
 
