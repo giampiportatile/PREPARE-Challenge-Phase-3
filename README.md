@@ -21,31 +21,33 @@ Phase 3 is focused on the imporvement of the winning models of Phase 2 for both 
 
 ## Setup
 
-Using pip:
-1) create virtual environment
+1) clone this repo
+git clone https://github.com/giampiportatile/PREPARE-Challenge-Phase-3
+   
+2) create the virtual environment
 conda create -n PREPARE_phase3 python=3.10
 
-2) Install the required libraries from the requirements.txt file:
-
+3) Install the required packages from the requirements.txt file shared in this directory:
 pip install -r requirements.txt
-
-
-Using conda:
-
-Create a new environment directly from the .yml file shared in this directory:
-
-conda env create -n PREPARE_phase3  -f environment.yml
 
 
 ## Data
 Copy the 5 files of the competition (social determinants track) into the data/raw folder.
 Note the raw data is not available anymore on the DrivenData website, so we will assume the user downloaded them during the competition.
 
-
 train_features.csv
 train_labels.csv
 test_features.csv
 submission_format.csv
+test_labels.csv (used only to compute the score on the unseen test data)
+
+## Parse data, train model and compute predictions
+
+1 data preprocessing and feature engineering
+python src\preprocess_data.py
+
+2 train models
+python src\train_and_predict.py
 
 
 To skip training, copy the model weights to models/model.pkl
