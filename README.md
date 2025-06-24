@@ -74,7 +74,7 @@ Inference time: ~3s
 Training and inference were both run on CPU.
 
 Run training
-The model can be trained from the command line or in Python.
+
 
 Command line training
 To run training from the command line: python src/train.py.
@@ -82,19 +82,4 @@ To run training from the command line: python src/train.py.
 $ python src/train.py --help
 Usage: train.py [OPTIONS]
 
-Options 
-  --features-path           PATH    Path to the raw training dataset for processing
-                                    [default: data/raw/train_features.csv]
-  --labels-path             PATH    Path to the training labels
-                                    [default: data/raw/train_labels.csv]
-  --model-save-path         PATH    Path to save the trained model weights
-                                    [default: models/model.pkl]
-  --cv                              Cross validate on training dataset and report RMSE before training
-                                    [default: no-cv]                                       
-  --cv-predict                      Generate predictions from cross validation and save before training
-                                    [default: no-cv-predict]
-  --cv-predictions-path     PATH    Path to save predictions from cross validation
-                                    [default: data/processed/cv_predictions.csv]
-  --debug                           Run on a small subset of the data for debugging
-                                    [default: no-debug]
- --help                             Show this message and exit.
+
