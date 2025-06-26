@@ -1,5 +1,3 @@
-#Summary
-
 This folder contains the trained models, that can be used to generate the forecast.
 
 For TabM we saved 5 different versions corresponding to 5 different seeds (as neural networks are not deterministic).
