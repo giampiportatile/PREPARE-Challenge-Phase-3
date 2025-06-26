@@ -47,12 +47,12 @@ submission_format.csv
 test_labels.csv (this file is used only to compute the score on the test data)
 
 
-## Parse data, train model and compute predictions
+## Parse data and train model 
 
-1 data preprocessing and feature engineering
+###1 data preprocessing and feature engineering
 python src\preprocess_data.py
 
-2 train models
+###2 train models
 python src\train_and_predict.py
 
 
@@ -64,20 +64,13 @@ pip install --user ipykernel
 python -m ipykernel install --user --name=nr_prepare
 And select nr_prepare as your Python kernel in Jupyter.
 
+## Models
 
-Hardware
-
-Training time: ~3m 10s
-Inference time: ~3s
-Training and inference were both run on CPU.
-
-Run training
+## Predictions
 
 
-Command line training
-To run training from the command line: python src/train.py.
+##Other
 
-$ python src/train.py --help
-Usage: train.py [OPTIONS]
+
 
 
