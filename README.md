@@ -34,6 +34,7 @@ pip install -r requirements.txt
 
 ## Data
 Copy the 5 files of the competition (social determinants track) into the data/raw folder.
+
 Note that the raw data is not available anymore on the DrivenData website, so we will assume the user downloaded them during the competition.
 
 train_features.csv
