@@ -1,8 +1,6 @@
 # PREPARE-Challenge-Phase-3
 Proof of Principle Demonstration for Phase 3 of PREPARE CHALLENGE  "Pioneering Research for Early Prediction of Alzheimer's and Related Dementias EUREKA Challenge" .
 
-Link to the competition: https://www.drivendata.org/competitions/group/nih-nia-alzheimers-adrd-competition/
-
 Link to the phase 3 of the competition: https://www.drivendata.org/competitions/304/prepare-challenge-phase-3/
 
 The project structure is based on https://cookiecutter-data-science.drivendata.org/.
@@ -36,7 +34,7 @@ pip install -r requirements.txt
 
 ## Data
 Copy the 5 files of the competition (social determinants track) into the data/raw folder.
-Note the raw data is not available anymore on the DrivenData website, so we will assume the user downloaded them during the competition.
+Note that the raw data is not available anymore on the DrivenData website, so we will assume the user downloaded them during the competition.
 
 train_features.csv
 
@@ -46,7 +44,7 @@ test_features.csv
 
 submission_format.csv
 
-test_labels.csv (this file is used only to compute the score on the unseen test data)
+test_labels.csv (this file is used only to compute the score on the test data)
 
 
 ## Parse data, train model and compute predictions
