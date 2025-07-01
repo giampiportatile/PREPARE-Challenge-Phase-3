@@ -84,6 +84,9 @@ And select nr_prepare as your Python kernel in Jupyter.
 
 ##Other
 
+3>python analysis_of_MHAS_data\load_and_preprocess_data.py
+3>python analysis_of_MHAS_data\load_and_preprocess_data.py
+
 
 
 
