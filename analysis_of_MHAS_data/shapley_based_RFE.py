@@ -16,9 +16,9 @@ base_dir = os.getcwd()
 #fraction of data to use to train the model
 fraction_train  = 0.8
 #there are 4535 features, I eliminate 200 at each iteration
-num_features_to_eliminate_at_each_step  = 10
+num_features_to_eliminate_at_each_step  = 200
 # at the end, 22*200 =4400 features are elimiated
-number_iterations = 2
+number_iterations = 22
 if torch.cuda.is_available():
    device = 'GPU'
 else:
