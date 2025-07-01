@@ -58,7 +58,7 @@ python src\preprocess_data.py
 
 python src\train_and_predict.py
 
-### Please execute the previous scripts from the 'base directory' which is the directory where the git hub repo has been cloned.
+#### Please execute the previous scripts from the 'base directory' which is the directory where the git hub repo has been cloned.
 
 ## Models
 All the model trained by train_and_predict.py are already saved in the 'model' folder in case the user wants to employ them directly (with the exception of the TabPFN model which is more than 100 Mb and could not be saved in github).
