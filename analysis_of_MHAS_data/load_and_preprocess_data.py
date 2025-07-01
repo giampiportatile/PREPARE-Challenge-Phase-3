@@ -169,7 +169,7 @@ try:
     df =pd.read_stata(os.path.join( base_dir, 'analysis_of_MHAS_data','H_MHAS_c2.dta'))
     data_found = True
 except:
-    print('H_MHAS_c2.dta file not fiund in the analysis_of_MHAS_data folder')
+    print('H_MHAS_c2.dta file not found in the analysis_of_MHAS_data folder')
     print('please download the H MHAS Data File  from   https://www.mhasweb.org/DataProducts/HarmonizedData.aspx')
         
     
