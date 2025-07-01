@@ -95,7 +95,7 @@ if data_found:
             pred = ctb_model.predict( val_X)
 
             #save error at each iteration     
-            errors[my_iter] = mean_squared_error(val_y, pred, squared=False)
+            errors[my_iter] = np.sqrt(mean_squared_error(val_y, pred))
             pd.Series(errors[:,0]).to_csv( os.path.join(base_dir,'errors_shapley.csv'))
             
             #save top features at each iteration
