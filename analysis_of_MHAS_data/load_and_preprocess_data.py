@@ -164,6 +164,7 @@ base_dir = os.getcwd()
         
 data_found = False
 print('reading data, please be patient')
+print('this may take several minutes, depending on your hardware and RAM')
 try:
     df =pd.read_stata(os.path.join( base_dir, 'analysis_of_MHAS_data','H_MHAS_c2.dta'))
     data_found = True
