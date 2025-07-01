@@ -31,8 +31,13 @@ warnings.simplefilter('ignore')
 base_dir = os.getcwd()
 sys.path.append(os.path.join(base_dir,'src'))
 from tabM_utils import *
-train_model()
-from tabpfn import TabPFNRegressor
+
+do_TABPFN = False
+try:
+   from tabpfn import TabPFNRegressor
+   do_TABPFN = True
+except:
+   print('error importing tabpfn Regressor')
 
 
 
@@ -64,7 +69,6 @@ except:
 
 if data_found:
  
-    
     print('all raw and pre-processed data found, training is starting now')    
     object_cols = data_cat.select_dtypes(include=['object']).columns
     for col in object_cols:
@@ -73,8 +77,10 @@ if data_found:
     
     idx_train = range(len(y_train))
     idx_test = range(len(y_train), data_gbm.shape[0])
+    
     #tab PFN is fitted only if cuda is available, otherwise this is not computationally feasible
     if torch.cuda.is_available():
+        if do_TABPFN: 
           print('CUDA found, fitting tabPFN')   
           clf = TabPFNRegressor(random_state=0, n_estimators =8)
           clf.fit(data_cat.iloc[idx_train], y_train)
