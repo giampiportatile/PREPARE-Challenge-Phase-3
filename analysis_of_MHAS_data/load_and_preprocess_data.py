@@ -1,9 +1,10 @@
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
+import os
 
-print('reading data, please be patient')
-
+#this is a list of the cognitive features of the dataset
+# see https://www.mhasweb.org/resources/DATA/HarmonizedData/H_MHAS/Version_C2/Harmonized_MHAS_C.2_2001_2018.pdf
 cognitive_variables = ['R1NOVISUAL', 'R2NOVISUAL', 'R3NOVISUAL', 'R4NOVISUAL',
        'R5NOVISUAL', 'S1NOVISUAL', 'S2NOVISUAL', 'S3NOVISUAL',
        'S4NOVISUAL', 'S5NOVISUAL', 'R1NOPENCIL', 'R2NOPENCIL',
@@ -157,26 +158,41 @@ cognitive_variables = ['R1NOVISUAL', 'R2NOVISUAL', 'R3NOVISUAL', 'R4NOVISUAL',
        'R2OALCHL', 'R3OALCHL', 'R4OALCHL', 'S1OALCHL', 'S2OALCHL',
        'S3OALCHL', 'S4OALCHL']
 
-df =pd.read_stata(r'O:\Gianpaolo\various\AD\phase3\data_MHAS\H_MHAS_c2.dta')
 
 
-cols = np.array([i.upper() for i in df.columns])
-df.columns = cols
-
-features = [ i for i in df.columns if i not in cognitive_variables]
-df[features].to_csv(r'O:\Gianpaolo\various\AD\phase3\data_MHAS\features.csv',index= False)
-
-df = df[cognitive_variables]
-
-categorical = [ i for i in df.dtypes.index if df.dtypes.loc[i] !='float64']
-
-le = LabelEncoder()
-for i in categorical:
-    df[i] = le.fit_transform(df[i])
+base_dir = os.getcwd()
+        
+data_found = False
+print('reading data, please be patient')
+try:
+    df =pd.read_stata(os.path.join( base_dir, 'analysis_of_MHAS_data','H_MHAS_c2.dta'))
+    data_found = True
+except:
+    print('H_MHAS_c2.dta file not found in the analysis_of_MHAS_data folder')
+    print('please download the H MHAS Data File from https://www.mhasweb.org/DataProducts/HarmonizedData.aspx')
+        
     
+if data_found:
+    cols = np.array([i.upper() for i in df.columns])
+    df.columns = cols
     
-for i in df.columns:
-    print(i) 
-    df[i] = (df[i]-df[i].mean())/df[i].std()
+    features = [ i for i in df.columns if i not in cognitive_variables]
+    print('saving the features')
+    df[features].to_csv(os.path.join( base_dir, 'analysis_of_MHAS_data','features.csv',index= False))
+   
+    print('features saved, computing the mean cognitive score now')
+    df = df[cognitive_variables]
     
-df.mean(1).to_csv(r'O:\Gianpaolo\various\AD\phase3\data_MHAS\target.csv',index= False) 
+    categorical = [ i for i in df.dtypes.index if df.dtypes.loc[i] !='float64']
+    
+    le = LabelEncoder()
+    for i in categorical:
+        df[i] = le.fit_transform(df[i])
+        
+    #z-score
+    for i in df.columns:
+        df[i] = (df[i]-df[i].mean())/df[i].std()
+     
+    print('saving the mean cognitive score now')
+    df.mean(1).to_csv(os.path.join( base_dir, 'analysis_of_MHAS_data','target.csv'),index= False)
+    print('all variables saved')
