@@ -87,7 +87,7 @@ if data_found:
                 features_for_select = my_features,
                 num_features_to_select = len(my_features)-num_features_to_eliminate_at_each_step,
                 steps = 1,
-                verbose= True,
+                verbose= True,#set this to False if needed as this function is quite verbose
                 algorithm=EFeaturesSelectionAlgorithm.RecursiveByShapValues,
                 shap_calc_type=EShapCalcType.Regular,
                 train_final_model = True)
