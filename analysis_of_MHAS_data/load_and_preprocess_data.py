@@ -169,8 +169,8 @@ try:
     df =pd.read_stata(os.path.join( base_dir, 'analysis_of_MHAS_data','H_MHAS_c2.dta'))
     data_found = True
 except:
-    print('H_MHAS_c2.dta file not found in the analysis_of_MHAS_data folder')
-    print('please download the H MHAS Data File from https://www.mhasweb.org/DataProducts/HarmonizedData.aspx')
+    print('H_MHAS_c2.dta file not fiund in the analysis_of_MHAS_data folder')
+    print('please download the H MHAS Data File  from   https://www.mhasweb.org/DataProducts/HarmonizedData.aspx')
         
     
 if data_found:
@@ -179,7 +179,7 @@ if data_found:
     
     features = [ i for i in df.columns if i not in cognitive_variables]
     print('saving the features')
-    df[features].to_csv(os.path.join( base_dir, 'analysis_of_MHAS_data','features.csv',index= False))
+    df[features].to_csv(os.path.join( base_dir, 'analysis_of_MHAS_data','features.csv'),index= False)
    
     print('features saved, computing the mean cognitive score now')
     df = df[cognitive_variables]
@@ -192,8 +192,9 @@ if data_found:
         
     #z-score
     for i in df.columns:
+    
         df[i] = (df[i]-df[i].mean())/df[i].std()
      
     print('saving the mean cognitive score now')
-    df.mean(1).to_csv(os.path.join( base_dir, 'analysis_of_MHAS_data','target.csv'),index= False)
+    df.mean(1).to_csv(os.path.join( base_dir, 'analysis_of_MHAS_data','target.csv'),index= False) 
     print('all variables saved')
