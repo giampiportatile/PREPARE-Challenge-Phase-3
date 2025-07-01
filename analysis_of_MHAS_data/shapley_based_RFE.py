@@ -27,8 +27,9 @@ else:
 print('reading the features')
 data_found =  False
 try:
-    X = pd.read_csv(os.path.join( base_dir, 'analysis_of_MHAS_data','features.csv'),low_memory =False).iloc[:200,:21]
-    y = pd.read_csv(os.path.join( base_dir, 'analysis_of_MHAS_data','target.csv')) .iloc[:200]
+    X = pd.read_csv(os.path.join( base_dir, 'analysis_of_MHAS_data','features.csv'))
+    y = pd.read_csv(os.path.join( base_dir, 'analysis_of_MHAS_data','target.csv')) 
+    data_found = True
 except:
     
     print('features and/or target data not found in the analysis_of_MHAS_data folder')
