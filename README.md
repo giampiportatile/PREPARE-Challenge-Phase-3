@@ -54,9 +54,13 @@ test_labels.csv (this file is used only to compute the score on the test data)
    
 python src\preprocess_data.py
 
-3) train models
+2) train models
 
 python src\train_and_predict.py
+
+3) optional: compute and visualise confidence intervals
+
+python src\mapie_confidence_intervals.py
 
 #### Please execute the previous scripts from the 'base directory' which is the directory where the git hub repo has been cloned.
 
