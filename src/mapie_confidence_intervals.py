@@ -15,6 +15,7 @@ confidence_level = 0.9
 #folds used for the cross-validation
 cv = 5
 data_found =False
+print('loading data')
 #################################################
 try:
     data_cat  = pd.read_csv(os.path.join(base_dir,'data','processed','data_cat.csv'),index_col=0)
@@ -24,7 +25,7 @@ try:
     y_test = pd.read_csv(os.path.join(base_dir, 'data','raw','test_labels.csv'))['composite_score']
     data_found =True
 except:
-   print('data not found in the /data/processed folder. Please run the preprocess_data.py script first ')  
+   print('data not found in the /data/processed and /data/raw folders. Please add the raw data and then run the preprocess_data.py script first ')  
    
 
 if data_found:
