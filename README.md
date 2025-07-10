@@ -74,13 +74,13 @@ For TabM we saved 5 different iterations which differ for the seed used to train
 in order to allow the user to analyse the impact of random initialisation and epochs on the performance.
 
 ## Prediction analysis
-1) To compute and display confidence intervals with 4 different conformal prediction methods, execute
+1) To compute and display confidence intervals with different conformal prediction methods, please execute
 
 python src\mapie_confidence_intervals.py
 
-2) To compute and display shap values, prediction and 50% and 90% confidence intervals for agiven subject
+2) To compute and display shap values, prediction and 50% and 90% confidence intervals for a given subject, please execute
 
-shap_and_visualisation.py
+python src\shap_and_visualisation.py
 
 
 
