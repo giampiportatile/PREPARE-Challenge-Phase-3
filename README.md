@@ -88,14 +88,18 @@ Please execute
 jupyter notebooks\example.ipynb
 
 
-## Other: MHAS data
+## Other: Application if SHapley values for recursufe feature elimination on the MHAS data
+
+Downlad the harmonized MHAS data from https://www.mhasweb.org/DataProducts/HarmonizedData.aspx
+Save it into 
+
 1) To pre-process the MHAS dataset (which we assume has been downloaded into
 
 python analysis_of_MHAS_data\load_and_preprocess_data.py
 
 2) As second step, in order to perform recursife feature elimination using Shapley Values, execute
 
-python analysis_of_MHAS_data\xxx.py
+python analysis_of_MHAS_data\shapley_based_RFE.py
    
 
 
