@@ -91,7 +91,7 @@ jupyter notebooks\example.ipynb
 ## Other: Application if SHapley values for recursufe feature elimination on the MHAS data
 
 Downlad the harmonized MHAS data from https://www.mhasweb.org/DataProducts/HarmonizedData.aspx
-Save it into 
+Save it into the analysis_of_MHAS_dat folder
 
 1) To pre-process the MHAS dataset (which we assume has been downloaded into
 
