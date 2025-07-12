@@ -35,7 +35,7 @@ pip install -r requirements.txt
 ## Data
 Copy the 5 files of the competition (social determinants track) into the data/raw folder.
 
-Note that the raw data is not available anymore on the DrivenData website, so we will assume the user downloaded them during the competition.
+Note that these files are not available anymore on the DrivenData website, so we will assume the user downloaded them during the competition.
 
 train_features.csv
 
@@ -65,7 +65,7 @@ python src\train_and_predict.py
 
 python src\mapie_confidence_intervals.py
 
-2) To compute and display shap values, prediction and 50% and 90% confidence intervals for a given subject, please execute
+2) To compute and display Shapley values, prediction and 50% and 90% confidence intervals for a given subject, please execute
 
 python src\shap_and_visualisation.py
 
@@ -88,7 +88,7 @@ Please execute
 jupyter notebooks\example.ipynb
 
 
-## Other: Application if SHapley values for recursufe feature elimination on the MHAS data
+## Other: Application of Shapley values for recursive feature elimination on the MHAS data
 
 Downlad the harmonized MHAS data from https://www.mhasweb.org/DataProducts/HarmonizedData.aspx
 Save the 'H_MHAS_c2.dta files into the analysis_of_MHAS_data folder
@@ -98,7 +98,7 @@ Save the 'H_MHAS_c2.dta files into the analysis_of_MHAS_data folder
 python analysis_of_MHAS_data\load_and_preprocess_data.py
 
 
-2) As second step, in order to perform recursife feature elimination using Shapley Values, execute
+2) As second step, in order to perform the recursive feature elimination using Shapley Values, execute
 
 python analysis_of_MHAS_data\shapley_based_RFE.py
    
