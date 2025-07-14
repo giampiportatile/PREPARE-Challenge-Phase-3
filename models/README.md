@@ -6,4 +6,4 @@ For TabM we saved 5 different versions corresponding to 5 different seeds (as ne
 
 We could not save the fitted TabPFN model is it is too big for gitHub (>100Mb).
 
-The code used to fit all these models is saved in ./src/train_models.py
+The code used to fit all these models is saved in .\src\train_models.py
