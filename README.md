@@ -1,5 +1,5 @@
 # PREPARE-Challenge-Phase-3
-Proof of Principle Demonstration for Phase 3 of PREPARE CHALLENGE  "Pioneering Research for Early Prediction of Alzheimer's and Related Dementias EUREKA Challenge" .
+PREPARE CHALLENGE  "Pioneering Research for Early Prediction of Alzheimer's and Related Dementias EUREKA Challenge" .
 
 Link to the phase 3 of the competition: https://www.drivendata.org/competitions/304/prepare-challenge-phase-3/
 
@@ -14,7 +14,7 @@ Licence: MIT
 
 ## Summary
 The challenge is centered around developing better methods for prediction of Alzheimer's disease and Alzheimer's disease related dementias (AD/ADRD) focuing in particular on early diagnosis. 
-Phase 3 is focused on the imporvement of the winning models of Phase 2 for both social determinant and acoustic tracks.
+The goal of Phase 3 is to improve the winning models of Phase 2 for both social determinant and acoustic tracks.
 
 
 ## Setup
